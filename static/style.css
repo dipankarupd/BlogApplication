@@ -1,0 +1,126 @@
+
+#topbar {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+#left {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    
+}
+
+#left h3, h5 {
+    color: cadetblue;
+}
+
+#right {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+}
+
+#btn {
+    width: 50px;
+    height: 40px;
+    background-color: cadetblue;
+    color: aliceblue;
+    margin: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+}
+
+#btn:link {
+    text-decoration: none;
+}
+
+#btn:hover {
+    background-color: #fff;
+    color: cadetblue;
+    border: 0.4px solid cadetblue;
+    border-radius: 12px;
+
+}
+
+h1 {
+    color: cadetblue;
+    text-align: center;
+    font-size: 9vh;
+}
+
+#end h3 {
+    margin: 15px;
+    font-size: 3.2vh;
+    font-weight: bold;
+    color: cornflowerblue;
+}
+
+#container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+}
+
+#card {
+    height: 500px;
+    width: 350px;
+    background-color: aquamarine;
+    margin: 20px;
+    border-radius: 12px;
+}
+
+#pc {
+    width: 200px;
+    height: 220px;
+    align-items: center;
+
+}
+
+#pc img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    margin-left: 75px;
+    margin-top: 10px;
+}
+
+#details h2 {
+    text-align: center;
+}
+
+#details {
+    margin-left: 10px;
+}
+
+#morebtn {
+    width: 50px;
+    height: 40px;
+    background-color: cadetblue;
+    color: aliceblue;
+    padding: 8px;
+    border: none;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+#morebtn:link {
+    text-decoration: none;
+}
+
+#morebtn:hover {
+    background-color: #fff;
+    color: cadetblue;
+    border: 0.4px solid cadetblue;
+    border-radius: 12px;
+}
+
+#card:hover {
+    background-color: #fff;
+    border: 1px solid aquamarine;
+    border-radius: 12px;
+}
