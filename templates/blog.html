@@ -24,38 +24,36 @@
             Welcome, {{user.username}}. Please enter your blog post here
         </h1>
 
-        <form action="">
+        <form method="POST" action="create">
+
+            {%csrf_token%}
             <div id="container2">
-
-                
-
                 <div id="sub1">
 
-                        <h3>Title of the Blog</h3>
-                        <textarea name="title" id="title" cols="56" rows="4"></textarea>
+                    <h3>Title of the Blog</h3>
+                    <textarea name="title" id="title" cols="56" rows="4"></textarea>
                         
-                        <h3>Write a short abstract</h3>
-                        <textarea name="abstract" id="abstract" cols="56" rows="8"></textarea>
+                    <h3>Write a short abstract</h3>
+                    <textarea name="abstract" id="abstract" cols="56" rows="8"></textarea>
 
-                        <h3>Blog Description</h3>
-                        <textarea name="description" id="description" cols="56" rows="16"></textarea>
-                    </form>
+                    <h3>Blog Description</h3>
+                    <textarea name="description" id="description" cols="56" rows="16"></textarea>
                 </div>
-
                 <div id="sub2">
-                    <div id="imagecontainer">
-                        <img src="" alt="" id="photo">
+                    <div id="imagecontainer">     
                     </div>
 
                     <input type="text" name="blogimage" id="blogimg" placeholder="URL for blog image">
-                    <input type="submit"  id="submit" name="submitimg">
+                    <button id="submit">Upload</button>
                 </div>
             </div>
-            
-                <input type="submit" id="submit2" name="submit">
+
+            <input type="submit" id="submit2">
         </form>
         
         {%endif%}
     </body>
+
+    <script src="{% static 'script.js' %}"></script>
     
 </html>

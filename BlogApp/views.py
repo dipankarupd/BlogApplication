@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from .models import Blog
+from django.utils import timezone
 
 # Create your views here.
 
@@ -63,5 +66,34 @@ def logout(req):
     return redirect('/')
 
 
+def unlog(req):
+    return render(req, 'unlogerr.html')
+
+
+@login_required
 def createblog(req):
-    return render(req, 'blog.html')
+    if req.method == 'POST':
+
+        title=req.POST['title']
+        abstract = req.POST['abstract']
+        description = req.POST['description']
+        imageurl = req.POST['blogimage']
+
+        print('title')
+        blog = Blog(
+            title=title,
+            abstract=abstract,
+            description=description,
+            image_url = imageurl,
+            author = req.user,
+            timeOfPosting = timezone.now()
+        )
+
+        blog.save()
+        return redirect('success_page')
+    else:
+        return render(req, 'blog.html')
+
+
+def succeess(req):
+    return render(req, 'success.html')
