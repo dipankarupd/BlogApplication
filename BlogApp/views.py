@@ -38,7 +38,7 @@ def signup(req):
         if password == password2:
             if User.objects.filter(email = email).exists():
                 messages.info(req, 'Email already exists')
-                redirect('signup')
+                return redirect('signup')
 
             elif User.objects.filter(username = username).exists():
                 messages.info(req, 'Username already in use')
@@ -56,3 +56,12 @@ def signup(req):
         
     else:
         return render(req, 'signup.html')
+
+
+def logout(req):
+    auth.logout(req)
+    return redirect('/')
+
+
+def createblog(req):
+    return render(req, 'blog.html')

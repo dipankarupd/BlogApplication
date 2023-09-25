@@ -1,0 +1,61 @@
+{% load static %}
+<html>
+    <head>
+        <title>Creating the Blog</title>
+        <link rel="stylesheet" href="{% static 'blogstyle.css' %}">
+    </head>
+
+    <body>
+        {%if not user.is_authenticated%} 
+
+        <div id="firstcontainer">
+            <div id="imgcontainer">
+                <img src="https://media.istockphoto.com/id/1408015545/photo/sorry-message-to-express-regret-remorse-apology-for-error-mistake-guilt-and-request.jpg?s=612x612&w=0&k=20&c=IZIvlXUwuupTOtS9M69ZVcGBf_JNpqqu47YAskRaOvI=" alt="">
+            </div>
+            <h3>Sorry, you need to login to add a blog post</h3>
+            <div id="container">
+                <a href="login">Click here to log in</a>
+            </div>
+        </div>
+        {%else%}
+        
+
+        <h1>
+            Welcome, {{user.username}}. Please enter your blog post here
+        </h1>
+
+        <form action="">
+            <div id="container2">
+
+                
+
+                <div id="sub1">
+
+                        <h3>Title of the Blog</h3>
+                        <textarea name="title" id="title" cols="56" rows="4"></textarea>
+                        
+                        <h3>Write a short abstract</h3>
+                        <textarea name="abstract" id="abstract" cols="56" rows="8"></textarea>
+
+                        <h3>Blog Description</h3>
+                        <textarea name="description" id="description" cols="56" rows="16"></textarea>
+                    </form>
+                </div>
+
+                <div id="sub2">
+                    <div id="imagecontainer">
+                        <img src="" alt="" id="photo">
+                    </div>
+
+                    <input type="text" name="blogimage" id="blogimg" placeholder="URL for blog image">
+                    <input type="submit"  id="submit" name="submitimg">
+                </div>
+            </div>
+            
+                <input type="submit" id="submit2" name="submit">
+        </form>
+        
+        {%endif%}
+    </body>
+    
+</html>

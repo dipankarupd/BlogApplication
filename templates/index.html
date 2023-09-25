@@ -13,12 +13,22 @@
 
             <div id="left">
                 <h3>MeBlog</h3>
+
+                {% if user.is_authenticated%}
+                <h5>{{user.username}}</h5>
+                {%else%}
                 <h5>Guest</h5>
+                {%endif%}
             </div>
 
             <div id="right">
-                <a id="btn" href=""> Share a Blog </a>
-                <a id="btn" href=" {%url 'login' %} "> Sign In </a>
+                <a id="btn" href="create"> Share a Blog </a>
+
+                {% if user.is_authenticated%}
+                <a id="btn" href="logout"> Sign Out </a>
+                {%else%}
+                <a id="btn" href="login"> Sign In </a>
+                {%endif%}  
             </div>
             
         </div>
@@ -32,39 +42,6 @@
         </div>
 
         <div id="container">
-            <div id="card">
-                <div id="pc">
-                    <img src="https://img.freepik.com/free-vector/boy-sitting-floor-reading-book_1308-92292.jpg?w=2000">
-                </div>
-                <div id="details">
-                    <h2>Topic</h3>
-                    <h3>Author</h5>
-                    <h5>Time</h6>
-                    <p>
-                        A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. Almost every piece of writing you do that is longer than a few sentences should be 
-
-                    </p>
-                    <a id="morebtn" href=""> Learn More </a>
-                </div>
-            </div>
-
-
-            <div id="card">
-                <div id="pc">
-                    <img src="https://img.freepik.com/free-vector/boy-sitting-floor-reading-book_1308-92292.jpg?w=2000">
-                </div>
-                <div id="details">
-                    <h2>Topic</h3>
-                    <h3>Author</h5>
-                    <h5>Time</h6>
-                    <p>
-                        A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. Almost every piece of writing you do that is longer than a few sentences should be 
-
-                    </p>
-                    <a id="morebtn" href=""> Learn More </a>
-                </div>
-            </div>
-
             <div id="card">
                 <div id="pc">
                     <img src="https://img.freepik.com/free-vector/boy-sitting-floor-reading-book_1308-92292.jpg?w=2000">

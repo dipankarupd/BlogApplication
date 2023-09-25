@@ -1,0 +1,129 @@
+body {
+    background-color: #f5f5f5;
+}
+
+
+h1 {
+    text-align: center;
+    color: cadetblue;
+}
+#firstcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#firstcontainer h3 {
+    color: cadetblue;
+    font-size: 4.2vh;
+    font-weight: bolder;
+    text-align: center;
+    
+}
+
+
+
+#imgcontainer {
+
+    margin-top: 30px;
+
+
+}
+
+#container {
+    color: cadetblue;
+    text-align: center;
+}
+
+a:link {
+    text-decoration: none;
+    color: cadetblue;
+}
+
+
+#title {
+    width: 500px;
+    height: 55px;
+    border: 1px solid cadetblue;
+    border-radius: 12px;
+}
+#abstract {
+    width: 500px;
+    height: 80px;
+    border: 1px solid cadetblue;
+    border-radius: 12px;
+}
+
+
+
+.imgsrc {
+    width: 500px;
+    height: 25px;
+    border: 1px solid cadetblue;
+    border-radius: 12px;
+}
+
+#description {
+    width: 500px;
+    height: 280px;
+    border: 1px solid cadetblue;
+    border-radius: 12px;
+}
+
+
+#container2 {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+#sub1 {
+
+    height: 100%;
+    width: 100%;
+}
+
+#sub2 {
+    height: 100%;
+    width: 100%;
+}
+
+#blogimg {
+    margin-top: 30px;
+    width: 350px;
+    height: 28px;
+    border-radius: 12px;
+    border: 1px solid cadetblue;
+}
+
+#submit {
+    margin-top: 30px;
+    margin-left: 10px;
+    width: 80px;
+    height: 28px;
+    border: none;
+    background-color: cadetblue;
+    color: white;
+    font-size: 2.6vh;
+    border-radius: 16px;
+}
+
+#imagecontainer {
+    width: 400px;
+    height: 260px;
+    border: 1px solid cadetblue;
+    border-radius: 12px;
+    margin-top: 75px;
+}
+
+#submit2 {
+    margin-left: 10px;
+    width: 94px;
+    height: 35px;
+    border: none;
+    background-color: cadetblue;
+    color: white;
+    font-size: 2.6vh;
+    border-radius: 16px;
+    margin-left: 45%;
+}
