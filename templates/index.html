@@ -44,21 +44,23 @@
         </div>
 
         <div id="container">
+            {% for blog in blogs %}
             <div id="card">
                 <div id="pc">
-                    <img src="https://img.freepik.com/free-vector/boy-sitting-floor-reading-book_1308-92292.jpg?w=2000">
+                    <img src="{{blog.image_url}}">
                 </div>
                 <div id="details">
-                    <h2>Topic</h3>
-                    <h3>Author</h5>
-                    <h5>Time</h6>
+                    <h2>{{blog.title}}</h3>
+                    <h3>{{blog.author}}</h5>
+                    <h5>{{blog.timeOfPosting}}</h6>
                     <p>
-                        A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. Almost every piece of writing you do that is longer than a few sentences should be 
-
+                        {{blog.abstract}}
                     </p>
-                    <a id="morebtn" href=""> Learn More </a>
+                    <a id="morebtn" href="{% url 'detail' blog.id %}">Learn More</a>
+
                 </div>
             </div>
+            {%endfor%}
         </div>
     </body>
 </html>

@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -8,7 +8,8 @@ from django.utils import timezone
 # Create your views here.
 
 def index(req):
-    return render(req, 'index.html')
+    blogs = Blog.objects.all()
+    return render(req, 'index.html', {'blogs': blogs})
 
 
 def login(req):
@@ -97,3 +98,8 @@ def createblog(req):
 
 def succeess(req):
     return render(req, 'success.html')
+
+
+def detail(req, blogid):
+    blog = get_object_or_404(Blog, id=blogid)
+    return render(req, 'blogdetail.html', {'blog': blog})

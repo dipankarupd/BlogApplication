@@ -1,0 +1,48 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>Blog Description</title>
+        <link rel="stylesheet" href="{% static 'detail.css' %}">
+    </head>
+
+    <body>
+        <div id="container">
+
+            <div id="top">
+
+                <div id="btn">
+                    <a href="{%url 'index' %}">Back</a>
+                </div>
+                
+                <h1>
+                    {{blog.title}}
+                </h1>
+            </div>
+            
+            <div id="imgcontainer">
+                <img src="{{blog.image_url}}" alt="">
+            </div>
+
+            <h2 id="author">
+                <i>{{blog.author}}</i>
+            </h3>
+
+            <h4>
+                {{blog.timeOfPosting}}
+            </h4>
+
+            <hr>
+
+            <h3>Abstract</h3>
+            <p>
+                {{blog.abstract}}
+            </p>
+
+            <h3>Description</h3>
+            <p>
+                {{blog.description}}
+            </p>
+        </div>
+    </body>
+</html>

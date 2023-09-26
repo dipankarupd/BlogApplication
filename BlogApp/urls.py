@@ -10,4 +10,5 @@ urlpatterns = [
     path('unlog', views.unlog, name='unlog'),
     path('create', views.createblog, name='create'),
     path('success', views.succeess, name='success_page'),
+    path('show/<int:blogid>', views.detail, name='detail'),
 ]

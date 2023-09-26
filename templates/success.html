@@ -1,1 +1,21 @@
-<h1>Successfully posted blog</h1>
+{% load static %}
+
+<html>
+    <head>
+        <title>Successful Blog</title>
+        <link rel="stylesheet" href="{% static 'success.css' %}">
+    </head>
+
+    <body>
+        <div id="container">
+            <img src="https://img.freepik.com/premium-vector/congratulations-greeting-card-lettering-template_28633-137.jpg?w=2000" alt="">
+        </div>
+
+        <h2>Congratulations, {{user.username}} Successfully Posted blog</h2>
+
+        <div id="buttons">
+            <a href="{% url 'create' %}" class="btn">Post another</a>
+            <a href="{% url 'index' %}" class="btn">Home</a>
+        </div>
+    </body>
+</html>
